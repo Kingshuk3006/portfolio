@@ -302,11 +302,11 @@ export default function Home() {
                 I use a number of tools that make web development and designing
                 easy and efficient.
               </p>
-              <div className="flex flex-row items-center space-x-4 mt-6">
-              {languages.map((language) => ( <img src={language.href}  alt={language.name} key={language.name} className="w-16"/>))}
+              <div className="flex flex-row items-center space-x-4 mt-6 flex-wrap">
+              {languages.map((language) => ( <img src={language.href}  alt={language.name} key={language.name} className="w-10 md:w-14 lg:w-16"/>))}
               </div>
-              <div className="flex flex-row items-center space-x-4 mt-6">
-              {technologies.map((language) => ( <img src={language.href}  alt={language.name} key={language.name} className="w-16"/>))}
+              <div className="flex flex-row items-center space-x-4 mt-6 flex-wrap">
+              {technologies.map((language) => ( <img src={language.href}  alt={language.name} key={language.name} className="w-10 md:w-14 lg:w-16"/>))}
               </div>
             </div>
           </div>
