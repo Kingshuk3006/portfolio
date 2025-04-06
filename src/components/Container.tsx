@@ -119,26 +119,19 @@ export default function Container(props: ContainerProps) {
         <meta name="robots" content="follow, index" />
         <meta name="theme-color" content="#7B82FE" />
         <meta content={meta.description} name="description" />
-        <meta
+        {/* <meta
           property="og:url"
           content={`https://www.wendoj.codes${router.asPath}`}
         />
         <link
           rel="canonical"
           href={`https://www.wendoj.codes${router.asPath}`}
-        />
+        /> */}
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Kingshuk" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="Kingshuk" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
       </Head>
       <nav
         className={cn(

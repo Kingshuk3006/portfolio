@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "@/styles/Container.module.css";
+import { preloaderWords } from "@/lib/data";
 
-/* Framer motion variants */
+
 const opacity = {
   initial: {
     opacity: 0,
@@ -23,15 +24,6 @@ const slideUp = {
   },
 };
 
-const words = [
-  "Hello",
-  "নমস্কার",
-  "नमस्ते",
-  "नमस्कार",
-  "வணக்கம்",
-  "やあ",
-  "Hallo",
-];
 
 export default function Preloader() {
   const [index, setIndex] = useState(0);
@@ -42,7 +34,7 @@ export default function Preloader() {
   }, []);
 
   useEffect(() => {
-    if (index == words.length - 1) return;
+    if (index == preloaderWords.length - 1) return;
     setTimeout(
       () => {
         setIndex(index + 1);
@@ -76,7 +68,7 @@ export default function Preloader() {
         <>
           <motion.p variants={opacity} initial="initial" animate="enter">
             <span></span>
-            {words[index]}
+            {preloaderWords[index]}
           </motion.p>
           <svg>
             <motion.path
